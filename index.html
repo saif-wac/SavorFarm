@@ -17,7 +17,7 @@
               "primary-container": "#2d4f36",
               "on-error-container": "#93000a",
               "surface-container-lowest": "#ffffff",
-              "secondary-fixed": "#ffdbcf",
+              "secondary-fixed": "#d4af37",
               "on-primary-fixed": "#00210d",
               "surface-container-high": "#ebe8e2",
               "on-primary-container": "#9ac0a0",
@@ -29,18 +29,18 @@
               "primary-fixed-dim": "#a9d0af",
               "surface-dim": "#dcdad4",
               "surface-container-highest": "#e5e2dc",
-              "on-secondary": "#ffffff",
-              "secondary-fixed-dim": "#ffb59c",
+              "on-secondary": "#1b1200",
+              "secondary-fixed-dim": "#c99a2f",
               "error": "#ba1a1a",
               "surface-bright": "#fcf9f3",
-              "on-secondary-container": "#722200",
+              "on-secondary-container": "#3a2a00",
               "background": "#fcf9f3",
               "primary": "#163821",
               "inverse-on-surface": "#f3f0ea",
               "on-surface": "#1c1c18",
               "on-secondary-fixed-variant": "#7f2b08",
               "on-tertiary-container": "#e7ad32",
-              "secondary": "#9f411e",
+              "secondary": "#d4af37",
               "primary-fixed": "#c5ecca",
               "on-primary-fixed-variant": "#2c4e35",
               "on-error": "#ffffff",
@@ -54,11 +54,11 @@
               "on-tertiary-fixed-variant": "#5e4200",
               "surface-tint": "#43664b",
               "tertiary": "#432e00",
-              "secondary-container": "#fd885f",
+              "secondary-container": "#f4e4b3",
               "on-background": "#1c1c18",
               "inverse-primary": "#a9d0af",
               "tertiary-fixed": "#ffdea7",
-              "on-secondary-fixed": "#390c00",
+              "on-secondary-fixed": "#2d1f00",
               "error-container": "#ffdad6",
               "surface-container": "#f0eee8"
             },
@@ -77,19 +77,35 @@
 <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- Header Navigation -->
 <nav class="fixed top-0 w-full z-50 glass-header">
-<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="content-shell flex justify-between items-center py-4">
 <a class="text-2xl font-bold text-white font-headline tracking-tight" href="#">SavorFarm</a>
-<div class="hidden md:flex items-center space-x-8">
+<div class="hidden lg:flex items-center space-x-8">
 <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#products">Products</a>
 <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#story">Our Story</a>
 <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#recipes">Recipes</a>
 <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#locations">Where to Buy</a>
 <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#contact">Contact</a>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold tracking-wide hover:opacity-90 active:scale-95 transition-all">
+<div class="flex items-center gap-3">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold tracking-wide hover:opacity-90 active:scale-95 transition-all hidden lg:inline-flex">
                 Shop Now
             </button>
+<button id="mobile-menu-toggle" class="lg:hidden w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 active:scale-95 transition-all" aria-label="Toggle menu" aria-expanded="false">
+<span class="material-symbols-outlined text-2xl" id="mobile-menu-icon">menu</span>
+</button>
 </div>
+</div>
+<div id="mobile-menu-panel" class="mobile-nav-panel" aria-hidden="true">
+<div class="content-shell h-full flex flex-col justify-center gap-4">
+<a class="mobile-nav-link" href="#products">Products</a>
+<a class="mobile-nav-link" href="#story">Our Story</a>
+<a class="mobile-nav-link" href="#recipes">Recipes</a>
+<a class="mobile-nav-link" href="#locations">Where to Buy</a>
+<a class="mobile-nav-link" href="#contact">Contact</a>
+<a class="btn-primary-premium w-full text-center py-4 rounded-lg font-bold" href="#products">Shop Now</a>
+</div>
+</div>
+<div id="mobile-menu-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
 </nav>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -100,7 +116,7 @@
 <!-- Vignette Effect -->
 <div class="absolute inset-0 hero-vignette"></div>
 </div>
-<div class="relative z-10 text-center px-6 max-w-5xl pt-20">
+<div class="relative z-10 text-center px-6 max-w-5xl pt-24 md:pt-28">
 <span class="inline-flex items-center hero-badge font-label text-sm md:text-base mb-6 reveal">
     <span class="status-dot" aria-hidden="true"></span>
     Certified Organic from Kerala
@@ -108,12 +124,12 @@
 <h1 class="font-headline text-5xl md:text-7xl hero-heading mb-6 md:mb-8 reveal">
     <span class="hero-heading-primary">Pure Kerala.</span><br/>Pure Taste.
 </h1>
-<p class="text-lg md:text-xl text-[#f5f1e8]/80 max-w-2xl mx-auto font-body mb-10 md:mb-12 leading-relaxed reveal">
+<p class="text-lg md:text-xl text-[#f5f1e8]/80 max-w-2xl mx-auto font-body mb-10 md:mb-12 leading-relaxed reveal px-2 sm:px-0">
                 From the lush, spice-scented hills of the Western Ghats to your kitchen table. Discover the authentic soul of Kerala.
             </p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center reveal">
-<a class="btn-primary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg" href="#products">Explore Library</a>
-<a class="btn-secondary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg" href="#story">Our Legacy</a>
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center reveal px-2 sm:px-0">
+<a class="btn-primary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto" href="#products">Explore Library</a>
+<a class="btn-secondary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto" href="#story">Our Legacy</a>
 </div>
 </div>
 <!-- Decorative Wave Divider -->
@@ -136,7 +152,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Category 1: Rice -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="macro shot of raw heirloom red rice grains in a rustic ceramic bowl with earthy textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKUPOI1mVxBLJ439RcrgMDPKMKbw5t9kiezOVBTubmuEzln3-VtSnddhd3R836jZarv7da7iJCFH94WOc6RIXszsSeMS9sinCVaPB-qjaiDEke2Le-8FVOo4OnZf1RAejcI6hKNalpea0OzvfaagSPToBXIUneeXRXj6NS_Y3VLjjFrXdYfwAciobzLBw09m3oWBgNq0SMLpKzv_LQUzihMkCQwE22gw4rjpgWLjCqXCnO7rQ45qTvp0Asd6V_2V3JlPOB57p_3Q"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -146,7 +162,7 @@
 </div>
 </div>
 <!-- Category 2: Coconut Oil -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="clear glass bottle of pure coconut oil standing on a wooden surface with split fresh coconut nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0SMlag0etT7-8Pj42bC_naNpQTDyTxoEmCy6cWafYsvFDoV_wdUAGrPFng0G2nLRpldBXgpPbOi3cUyCLHrIbIwzrRcavRdQ7oHFkjOKqhA4BbFf729v-TSKvxJ6k0IQdK3ue2YJ6KtP5lmOwfzxvfZrCwF4Ctng4hXA0L61Gga1BNZoegSzPFiog7tWf9P1AqXjz5_HJRWKugkck716dPtV-ul09NYBTNNy2YT5VkQotqYeOK5uoRSmGWttO0r_iPZzDUFuRdw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -156,7 +172,7 @@
 </div>
 </div>
 <!-- Category 3: Spices -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant assortment of whole spices including peppercorns, cardamom and cinnamon bark on a dark slate surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhE7EJB7nnARWmXQgnTQU2H3PJxEt8t9BUdZ7COBp7dwQiSES1gTUbJjtH7dVw222RCdgQvCCTd7jwZOJSVRBZUViJUCfC-Tv7laAVUhquCcFV2182enrBQWL5CLGCeI9bhrNrraE4cgmp5IwxLh2-ImUQ3aN3lJyPMSMQX08okpASuKQSmlLZCYLz9pV72Z-YAIKeHoB1ViG6-x6W6gdpg_UhzLKAfewoyDMoUjizTuHVepjQKjm0J_At6IsBC4zmAN8Bps6_kw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -166,7 +182,7 @@
 </div>
 </div>
 <!-- Category 4: Snacks -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="crispy golden banana chips in a traditional brass bowl with curry leaves on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS276uc8r07a8N2y8mzFdbTxW3-YN7wifSgU493OCmRxi2qDeQ1LhTJdvdYcE6jWQvl3wDFvtPuevoBB0YBwx4qhXhW2RraWXRupVp-MvifAtkQ4Qc87kA_yJe8iEQf5hy4QdgKnp9jQ80Qhq-bFe9IiMZI1XWTWErm8UY-MOQxrVdnYGoopLf1JxpUcPq2NGoKBoyb-UlTS5J7-X9my7ll_p2E_X6fpNmBLHgwl7Hut7Ofxz5tGv-3LkXV2vHGpK7JCY3VPksvw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -176,7 +192,7 @@
 </div>
 </div>
 <!-- Category 5: Grains -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="collection of millets and whole grains in rustic linen sacks on a barn-wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPQCfrg98GgNUDE3nEGZoIB9jjfB-O1myEI2ugGsdVmPbAwBgyIMbhEGeAEBaKis9_ap-WpLDFWsmRiERLmGe-MO1112Tn5tRWdGiYIlP4ITzjuenGFOTksluvcogfCJ9yH4vIqWkXLZ5QG3-BG_VGDGfiA0hAeWYyPB9JXVuCbv8t0XFaBf4D85x1Oyh2yXGnTrzAVGHyaNS1Cf_-Y5NAOaKl6h-E6PQyOG5YuKbl8qqi-RGEHuru7VRWxxQZHr573DIM3Z49ew"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -186,7 +202,7 @@
 </div>
 </div>
 <!-- Category 6: Sweets -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item">
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="traditional kerala sweets like jaggery-coated banana chips and halwa on a banana leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGrI7Mqos5Y1RgcdYkJz7rjOd7T-0nUteEILQhTtkLhV-aOqV50aV38Mxmk5IPvTJd9PkSfPMhLne-zR6ZkEfVRlPx-KYg0LvxPB1K7nIvmMJtZzC_qzIs23-qOUvEhCoPj6DQR7JkgOTr345t5mM2vgdDngI4qBsv4KU5VCwr9HxrKa7iQUqBCtUT2LwHTH2pyRpdB0WgreIQVAAtpNst-iCJ9UkwJbBDaba55N2NGY8aYZ0F3HwjlcxLGcpMTxw8tjwHwSHNA"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -256,7 +272,7 @@
 </div>
 <div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 snap-x">
 <!-- Recipe 1 -->
-<div class="flex-none w-[350px] snap-start group stagger-item">
+<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
 <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="bowl of vibrant yellow vegetable stew with fresh curry leaves and creamy coconut milk base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtf-BL2lWT42_LIVDZFqhjZI3RclMGM6e5Pwzo2-d1O_k3p5c4wiusiZ-PgrO_vFt2GGpkbmnyfkOt7h-Qg-zyJoPm7ID4xhLGq7RFTckviuMpESCJK79JA57qXA0swniEK-cujpz-hHHhSk6J5gBmNGeDSn0UPS_HJuXAegC6theAlYynLVL6mp9GEEuWAHEpPgK2RAtXlA4A2R-qC6C6Mgxeg4SZVz4kb9B2BpC171d3d2Bnhh_XbsaDMR5Q5Cgg2md-kSd4uA"/>
 <div class="absolute top-4 left-4">
@@ -270,7 +286,7 @@
 </div>
 </div>
 <!-- Recipe 2 -->
-<div class="flex-none w-[350px] snap-start group stagger-item">
+<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
 <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="aromatic fish curry with thick red tamarind sauce in a traditional clay pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsTyWMiH5PWhOBfYF9jvvvnDNQU5XKHXASgO1JIQAR5it72C_GRB_cEWaYcyeC87R4pzXJNs5moxGg0gZiXRrU1hy6Wpn4ahq-HbxyYJeoMTRXPboHPZsEcjXx_ds6kaTr4awQ6C_cOEQepHR6CFr746ijOgaRkj2Z-O46X_MLNYjvQ07GlkoqhS1LKpTyAYKPQ9S1fa2ubGbLgqDmdBfw5AX6oIQ5wLLrMbsw_rutLSUdUrkNtcR2LlGS0y8wNKddsH5HVbTryw"/>
 <div class="absolute top-4 left-4">
@@ -284,7 +300,7 @@
 </div>
 </div>
 <!-- Recipe 3 -->
-<div class="flex-none w-[350px] snap-start group stagger-item">
+<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
 <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="crispy golden thin crepes served with a side of white coconut chutney and spiced potato filling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaYKi1-ciSVnJBj87LpnZ3oGF7j-0bEfd5rUoB_kTYmGZ9mnlTkDonHVRanHoLqRwOwBsFOppRosDXAd3eYr6G1hf87Wc1ISRB_jjO1bB7xFYCW2c1GdHBgTFGNiefDDsjI9iz4wRy4n1T6gS24XpPqkap6E6RP4oOjutvW2aEIgb5OaKFUa3G06bxCXxQUQlKnnetLOAndtHNaA-HHVerNM6essfJqCAOyaVhR-qvO1h6wzQkdlZDD6JGPwtlVbtbDXSt3tnIhg"/>
 <div class="absolute top-4 left-4">
@@ -298,7 +314,7 @@
 </div>
 </div>
 <!-- Recipe 4 -->
-<div class="flex-none w-[350px] snap-start group stagger-item">
+<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
 <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="creamy rice pudding with nuts and raisins in a polished bronze bowl on a traditional rug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nhqX4hcqm5j7Q-Vzm7FI1rSGCgrPyQWoP4WpT82Pn3IIaBCQ9AGZk59-tHqg4IZJ7LaKCMk3Jlv5-tzZNFCyVxFe1qKDHg-XvsfP6kr7QJeJPwKGx6kR7G4diCm2hUUriD1XXeEPX9Gja8RGOnSuLcSbV8dNovY6syIG4BBXd_sUj9ND0bZyDViWiW7UrmjKnZMA56kf9cZqMT1cjIiTFTjqphbChLStg490mDppK8NFQhoqwJElG-47orUlqhSJ1c89Xq4xrg"/>
 <div class="absolute top-4 left-4">

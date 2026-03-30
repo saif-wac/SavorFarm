@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initHeroWaveAnimation();
     initHeroImageParallax();
+    initMobileNav();
     initHeaderScroll();
 });
 
@@ -183,6 +184,76 @@ function initHeroImageParallax() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     update();
+}
+
+/**
+ * Mobile Navigation
+ */
+function initMobileNav() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const panel = document.getElementById('mobile-menu-panel');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (!toggle || !panel || !backdrop || !icon) return;
+
+    const links = panel.querySelectorAll('a');
+    let lastFocused = null;
+
+    const closeMenu = () => {
+        panel.classList.remove('open');
+        backdrop.classList.remove('show');
+        icon.textContent = 'menu';
+        document.body.style.overflow = '';
+        toggle.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('aria-hidden', 'true');
+        if (lastFocused) lastFocused.focus();
+    };
+
+    const openMenu = () => {
+        lastFocused = document.activeElement;
+        panel.classList.add('open');
+        backdrop.classList.add('show');
+        icon.textContent = 'close';
+        document.body.style.overflow = 'hidden';
+        toggle.setAttribute('aria-expanded', 'true');
+        panel.setAttribute('aria-hidden', 'false');
+        const firstFocusable = panel.querySelector('a, button, input, select, textarea');
+        if (firstFocusable) firstFocusable.focus();
+    };
+
+    toggle.addEventListener('click', () => {
+        if (panel.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    backdrop.addEventListener('click', closeMenu);
+    links.forEach(link => link.addEventListener('click', closeMenu));
+
+    // focus trap
+    panel.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        const focusables = panel.querySelectorAll('a, button, input, select, textarea');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    // close on escape
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel.classList.contains('open')) {
+            closeMenu();
+        }
+    });
 }
 
 /**
