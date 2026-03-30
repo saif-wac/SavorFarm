@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroWaveAnimation();
     initHeroImageParallax();
     initMobileNav();
+    initRecipeSwiper();
     initHeaderScroll();
 });
 
@@ -194,6 +195,7 @@ function initMobileNav() {
     const panel = document.getElementById('mobile-menu-panel');
     const backdrop = document.getElementById('mobile-menu-backdrop');
     const icon = document.getElementById('mobile-menu-icon');
+    const internalClose = document.getElementById('mobile-menu-close');
     if (!toggle || !panel || !backdrop || !icon) return;
 
     const links = panel.querySelectorAll('a');
@@ -203,8 +205,10 @@ function initMobileNav() {
         panel.classList.remove('open');
         backdrop.classList.remove('show');
         icon.textContent = 'menu';
+        toggle.classList.remove('is-open');
         document.body.style.overflow = '';
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         panel.setAttribute('aria-hidden', 'true');
         if (lastFocused) lastFocused.focus();
     };
@@ -214,8 +218,10 @@ function initMobileNav() {
         panel.classList.add('open');
         backdrop.classList.add('show');
         icon.textContent = 'close';
+        toggle.classList.add('is-open');
         document.body.style.overflow = 'hidden';
         toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
         panel.setAttribute('aria-hidden', 'false');
         const firstFocusable = panel.querySelector('a, button, input, select, textarea');
         if (firstFocusable) firstFocusable.focus();
@@ -230,6 +236,7 @@ function initMobileNav() {
     });
 
     backdrop.addEventListener('click', closeMenu);
+    internalClose?.addEventListener('click', closeMenu);
     links.forEach(link => link.addEventListener('click', closeMenu));
 
     // focus trap
@@ -257,14 +264,43 @@ function initMobileNav() {
 }
 
 /**
+ * Recipe Carousel
+ */
+function initRecipeSwiper() {
+    if (typeof Swiper === 'undefined') return;
+    new Swiper('#recipe-carousel', {
+        slidesPerView: 1.1,
+        spaceBetween: 16,
+        speed: 550,
+        grabCursor: true,
+        navigation: {
+            nextEl: '#recipe-next',
+            prevEl: '#recipe-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            640: { slidesPerView: 1.6, spaceBetween: 18 },
+            768: { slidesPerView: 2.2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 22 },
+            1280: { slidesPerView: 4, spaceBetween: 24 }
+        }
+    });
+}
+
+/**
  * Header Scroll Behavior
  * Toggles 'scrolled' class based on scroll position.
  */
 function initHeaderScroll() {
     const header = document.querySelector('nav');
+    const panel = document.getElementById('mobile-menu-panel');
     if (!header) return;
 
     window.addEventListener('scroll', () => {
+        if (panel && panel.classList.contains('open')) return;
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {

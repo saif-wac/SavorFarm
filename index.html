@@ -1,504 +1,717 @@
 ﻿<!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SavorFarm | Pure Kerala. Pure Taste.</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary-container": "#2d4f36",
-              "on-error-container": "#93000a",
-              "surface-container-lowest": "#ffffff",
-              "secondary-fixed": "#d4af37",
-              "on-primary-fixed": "#00210d",
-              "surface-container-high": "#ebe8e2",
-              "on-primary-container": "#9ac0a0",
-              "surface-variant": "#e5e2dc",
-              "outline": "#727971",
-              "on-surface-variant": "#424842",
-              "on-tertiary-fixed": "#271900",
-              "inverse-surface": "#31312d",
-              "primary-fixed-dim": "#a9d0af",
-              "surface-dim": "#dcdad4",
-              "surface-container-highest": "#e5e2dc",
-              "on-secondary": "#1b1200",
-              "secondary-fixed-dim": "#c99a2f",
-              "error": "#ba1a1a",
-              "surface-bright": "#fcf9f3",
-              "on-secondary-container": "#3a2a00",
-              "background": "#fcf9f3",
-              "primary": "#163821",
-              "inverse-on-surface": "#f3f0ea",
-              "on-surface": "#1c1c18",
-              "on-secondary-fixed-variant": "#7f2b08",
-              "on-tertiary-container": "#e7ad32",
-              "secondary": "#d4af37",
-              "primary-fixed": "#c5ecca",
-              "on-primary-fixed-variant": "#2c4e35",
-              "on-error": "#ffffff",
-              "surface": "#fcf9f3",
-              "outline-variant": "#c2c8c0",
-              "surface-container-low": "#f6f3ed",
-              "on-primary": "#ffffff",
-              "tertiary-container": "#5f4300",
-              "tertiary-fixed-dim": "#f9bc41",
-              "on-tertiary": "#ffffff",
-              "on-tertiary-fixed-variant": "#5e4200",
-              "surface-tint": "#43664b",
-              "tertiary": "#432e00",
-              "secondary-container": "#f4e4b3",
-              "on-background": "#1c1c18",
-              "inverse-primary": "#a9d0af",
-              "tertiary-fixed": "#ffdea7",
-              "on-secondary-fixed": "#2d1f00",
-              "error-container": "#ffdad6",
-              "surface-container": "#f0eee8"
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SavorFarm | Pure Kerala. Pure Taste.</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#2d4f36",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d4af37",
+                        "on-primary-fixed": "#00210d",
+                        "surface-container-high": "#ebe8e2",
+                        "on-primary-container": "#9ac0a0",
+                        "surface-variant": "#e5e2dc",
+                        "outline": "#727971",
+                        "on-surface-variant": "#424842",
+                        "on-tertiary-fixed": "#271900",
+                        "inverse-surface": "#31312d",
+                        "primary-fixed-dim": "#a9d0af",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-highest": "#e5e2dc",
+                        "on-secondary": "#1b1200",
+                        "secondary-fixed-dim": "#c99a2f",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf9f3",
+                        "on-secondary-container": "#3a2a00",
+                        "background": "#fcf9f3",
+                        "primary": "#163821",
+                        "inverse-on-surface": "#f3f0ea",
+                        "on-surface": "#1c1c18",
+                        "on-secondary-fixed-variant": "#7f2b08",
+                        "on-tertiary-container": "#e7ad32",
+                        "secondary": "#d4af37",
+                        "primary-fixed": "#c5ecca",
+                        "on-primary-fixed-variant": "#2c4e35",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f3",
+                        "outline-variant": "#c2c8c0",
+                        "surface-container-low": "#f6f3ed",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#5f4300",
+                        "tertiary-fixed-dim": "#f9bc41",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5e4200",
+                        "surface-tint": "#43664b",
+                        "tertiary": "#432e00",
+                        "secondary-container": "#f4e4b3",
+                        "on-background": "#1c1c18",
+                        "inverse-primary": "#a9d0af",
+                        "tertiary-fixed": "#ffdea7",
+                        "on-secondary-fixed": "#2d1f00",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f0eee8"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "headline": ["Noto Serif"],
-              "body": ["Manrope"],
-              "label": ["Plus Jakarta Sans"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- Header Navigation -->
-<nav class="fixed top-0 w-full z-50 glass-header">
+    <!-- Header Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-header">
 <div class="content-shell flex justify-between items-center py-4">
 <a class="text-2xl font-bold text-white font-headline tracking-tight" href="#">SavorFarm</a>
 <div class="hidden lg:flex items-center space-x-8">
-<a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#products">Products</a>
-<a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#story">Our Story</a>
-<a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#recipes">Recipes</a>
-<a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#locations">Where to Buy</a>
-<a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#contact">Contact</a>
-</div>
-<div class="flex items-center gap-3">
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold tracking-wide hover:opacity-90 active:scale-95 transition-all hidden lg:inline-flex">
-                Shop Now
-            </button>
-<button id="mobile-menu-toggle" class="lg:hidden w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 active:scale-95 transition-all" aria-label="Toggle menu" aria-expanded="false">
-<span class="material-symbols-outlined text-2xl" id="mobile-menu-icon">menu</span>
+                <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link"
+                    href="#products">Products</a>
+                <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link" href="#story">Our
+                    Story</a>
+                <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link"
+                    href="#recipes">Recipes</a>
+                <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link"
+                    href="#locations">Where to Buy</a>
+                <a class="text-white transition-colors font-headline text-lg tracking-tight nav-link"
+                    href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button
+                    class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold tracking-wide hover:opacity-90 active:scale-95 transition-all hidden lg:inline-flex">
+                    Shop Now
+                </button>
+                <button id="mobile-menu-toggle"
+                    class="lg:hidden w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 active:scale-95 transition-all"
+                    aria-label="Toggle menu" aria-expanded="false">
+                    <span class="material-symbols-outlined text-2xl" id="mobile-menu-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-panel" class="mobile-nav-panel" aria-hidden="true">
+<div class="content-shell h-full flex flex-col justify-center gap-4 relative pt-4">
+<button id="mobile-menu-close" class="absolute top-2 right-2 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 active:scale-95 transition-all" aria-label="Close menu">
+<span class="material-symbols-outlined text-2xl">close</span>
 </button>
-</div>
-</div>
-<div id="mobile-menu-panel" class="mobile-nav-panel" aria-hidden="true">
-<div class="content-shell h-full flex flex-col justify-center gap-4">
 <a class="mobile-nav-link" href="#products">Products</a>
 <a class="mobile-nav-link" href="#story">Our Story</a>
-<a class="mobile-nav-link" href="#recipes">Recipes</a>
-<a class="mobile-nav-link" href="#locations">Where to Buy</a>
-<a class="mobile-nav-link" href="#contact">Contact</a>
-<a class="btn-primary-premium w-full text-center py-4 rounded-lg font-bold" href="#products">Shop Now</a>
-</div>
-</div>
-<div id="mobile-menu-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
-</nav>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="hero-bg w-full h-full object-cover brightness-[0.7] contrast-[0.9] scale-105 blur-[2px]" data-alt="expansive sun-drenched terraced tea and spice plantations in Kerala mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFGOwAZJp22yKPZJJXoIU18oHU1plobVStfo7Sd245wog4Uv5uq5OkLdD0ZAlkcKC-dRvy2bdPeP2gEZmnwq_xjHKBnIckHiE2zSNPiWBKaZmRVyIEF5v7M0TN8Oh0DhY-BUFOdAgLtULITxXymSgmqWXkBnT9ECohJqPDpfrAXwNmMS3-5URaOrThfBbJYxbiLeVK7DTsbqm-WOdKpVT5bxUHOBYVaiWI59Dis3_vDskOyZTschWDLqQ23SljgKsjk_xoOrDV2w"/>
-<!-- Dark Gradient Overlay -->
-<div class="absolute inset-0 hero-gradient"></div>
-<!-- Vignette Effect -->
-<div class="absolute inset-0 hero-vignette"></div>
-</div>
-<div class="relative z-10 text-center px-6 max-w-5xl pt-24 md:pt-28">
-<span class="inline-flex items-center hero-badge font-label text-sm md:text-base mb-6 reveal">
-    <span class="status-dot" aria-hidden="true"></span>
-    Certified Organic from Kerala
-</span>
-<h1 class="font-headline text-5xl md:text-7xl hero-heading mb-6 md:mb-8 reveal">
-    <span class="hero-heading-primary">Pure Kerala.</span><br/>Pure Taste.
-</h1>
-<p class="text-lg md:text-xl text-[#f5f1e8]/80 max-w-2xl mx-auto font-body mb-10 md:mb-12 leading-relaxed reveal px-2 sm:px-0">
-                From the lush, spice-scented hills of the Western Ghats to your kitchen table. Discover the authentic soul of Kerala.
+                <a class="mobile-nav-link" href="#recipes">Recipes</a>
+                <a class="mobile-nav-link" href="#locations">Where to Buy</a>
+                <a class="mobile-nav-link" href="#contact">Contact</a>
+                <a class="btn-primary-premium w-full text-center py-4 rounded-lg font-bold" href="#products">Shop
+                    Now</a>
+            </div>
+        </div>
+        <div id="mobile-menu-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="hero-bg w-full h-full object-cover brightness-[0.7] contrast-[0.9] scale-105 blur-[2px]"
+                data-alt="expansive sun-drenched terraced tea and spice plantations in Kerala mountains"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFGOwAZJp22yKPZJJXoIU18oHU1plobVStfo7Sd245wog4Uv5uq5OkLdD0ZAlkcKC-dRvy2bdPeP2gEZmnwq_xjHKBnIckHiE2zSNPiWBKaZmRVyIEF5v7M0TN8Oh0DhY-BUFOdAgLtULITxXymSgmqWXkBnT9ECohJqPDpfrAXwNmMS3-5URaOrThfBbJYxbiLeVK7DTsbqm-WOdKpVT5bxUHOBYVaiWI59Dis3_vDskOyZTschWDLqQ23SljgKsjk_xoOrDV2w" />
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 hero-gradient"></div>
+            <!-- Vignette Effect -->
+            <div class="absolute inset-0 hero-vignette"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl pt-24 md:pt-28">
+            <span class="inline-flex items-center hero-badge font-label text-sm md:text-base mb-6 reveal">
+                <span class="status-dot" aria-hidden="true"></span>
+                Certified Organic from Kerala
+            </span>
+            <h1 class="font-headline text-5xl md:text-7xl hero-heading mb-6 md:mb-8 reveal">
+                <span class="hero-heading-primary">Pure Kerala.</span><br />Pure Taste.
+            </h1>
+            <p
+                class="text-lg md:text-xl text-[#f5f1e8]/80 max-w-2xl mx-auto font-body mb-10 md:mb-12 leading-relaxed reveal px-2 sm:px-0">
+                From the lush, spice-scented hills of the Western Ghats to your kitchen table. Discover the authentic
+                soul of Kerala.
             </p>
-<div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center reveal px-2 sm:px-0">
-<a class="btn-primary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto" href="#products">Explore Library</a>
-<a class="btn-secondary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto" href="#story">Our Legacy</a>
-</div>
-</div>
-<!-- Decorative Wave Divider -->
-<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 hero-wave-wrap">
-<svg class="relative block w-full h-[120px] hero-wave" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C49.63,22.21,114.5,43.43,184.4,54.67c51.3,8.23,101.44,11.3,136.99,1.77Z" fill="#fcf9f3"></path>
-</svg>
-</div>
-</section>
-<!-- Product Categories Bento Grid -->
-<section class="py-24 px-8 max-w-screen-2xl mx-auto bg-surface reveal" id="products">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-xl">
-<h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">The Curated Pantry</h2>
-<p class="text-on-surface-variant">Each category represents a piece of Kerala's culinary heritage, sourced directly from small-scale family farms committed to ancestral methods.</p>
-</div>
-<a class="text-secondary font-semibold flex items-center gap-2 group" href="#">
-                View All Categories <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Category 1: Rice -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="macro shot of raw heirloom red rice grains in a rustic ceramic bowl with earthy textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKUPOI1mVxBLJ439RcrgMDPKMKbw5t9kiezOVBTubmuEzln3-VtSnddhd3R836jZarv7da7iJCFH94WOc6RIXszsSeMS9sinCVaPB-qjaiDEke2Le-8FVOo4OnZf1RAejcI6hKNalpea0OzvfaagSPToBXIUneeXRXj6NS_Y3VLjjFrXdYfwAciobzLBw09m3oWBgNq0SMLpKzv_LQUzihMkCQwE22gw4rjpgWLjCqXCnO7rQ45qTvp0Asd6V_2V3JlPOB57p_3Q"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Ancient Grains</span>
-<h3 class="text-white font-headline text-3xl mb-2">Heritage Rice</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Hand-pounded Palakkadan Matta and Navara varieties.</p>
-</div>
-</div>
-<!-- Category 2: Coconut Oil -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="clear glass bottle of pure coconut oil standing on a wooden surface with split fresh coconut nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0SMlag0etT7-8Pj42bC_naNpQTDyTxoEmCy6cWafYsvFDoV_wdUAGrPFng0G2nLRpldBXgpPbOi3cUyCLHrIbIwzrRcavRdQ7oHFkjOKqhA4BbFf729v-TSKvxJ6k0IQdK3ue2YJ6KtP5lmOwfzxvfZrCwF4Ctng4hXA0L61Gga1BNZoegSzPFiog7tWf9P1AqXjz5_HJRWKugkck716dPtV-ul09NYBTNNy2YT5VkQotqYeOK5uoRSmGWttO0r_iPZzDUFuRdw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Cold Pressed</span>
-<h3 class="text-white font-headline text-3xl mb-2">Coconut Oil</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Virgin extracts from sun-dried estate kernels.</p>
-</div>
-</div>
-<!-- Category 3: Spices -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant assortment of whole spices including peppercorns, cardamom and cinnamon bark on a dark slate surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhE7EJB7nnARWmXQgnTQU2H3PJxEt8t9BUdZ7COBp7dwQiSES1gTUbJjtH7dVw222RCdgQvCCTd7jwZOJSVRBZUViJUCfC-Tv7laAVUhquCcFV2182enrBQWL5CLGCeI9bhrNrraE4cgmp5IwxLh2-ImUQ3aN3lJyPMSMQX08okpASuKQSmlLZCYLz9pV72Z-YAIKeHoB1ViG6-x6W6gdpg_UhzLKAfewoyDMoUjizTuHVepjQKjm0J_At6IsBC4zmAN8Bps6_kw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">High Altitude</span>
-<h3 class="text-white font-headline text-3xl mb-2">Black Gold &amp; Spices</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Tellicherry peppercorns and high-grade cardamom.</p>
-</div>
-</div>
-<!-- Category 4: Snacks -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="crispy golden banana chips in a traditional brass bowl with curry leaves on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS276uc8r07a8N2y8mzFdbTxW3-YN7wifSgU493OCmRxi2qDeQ1LhTJdvdYcE6jWQvl3wDFvtPuevoBB0YBwx4qhXhW2RraWXRupVp-MvifAtkQ4Qc87kA_yJe8iEQf5hy4QdgKnp9jQ80Qhq-bFe9IiMZI1XWTWErm8UY-MOQxrVdnYGoopLf1JxpUcPq2NGoKBoyb-UlTS5J7-X9my7ll_p2E_X6fpNmBLHgwl7Hut7Ofxz5tGv-3LkXV2vHGpK7JCY3VPksvw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Artisanal Crunch</span>
-<h3 class="text-white font-headline text-3xl mb-2">Traditional Snacks</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Nendran banana chips fried in fresh coconut oil.</p>
-</div>
-</div>
-<!-- Category 5: Grains -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="collection of millets and whole grains in rustic linen sacks on a barn-wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPQCfrg98GgNUDE3nEGZoIB9jjfB-O1myEI2ugGsdVmPbAwBgyIMbhEGeAEBaKis9_ap-WpLDFWsmRiERLmGe-MO1112Tn5tRWdGiYIlP4ITzjuenGFOTksluvcogfCJ9yH4vIqWkXLZ5QG3-BG_VGDGfiA0hAeWYyPB9JXVuCbv8t0XFaBf4D85x1Oyh2yXGnTrzAVGHyaNS1Cf_-Y5NAOaKl6h-E6PQyOG5YuKbl8qqi-RGEHuru7VRWxxQZHr573DIM3Z49ew"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Sustainable Harvest</span>
-<h3 class="text-white font-headline text-3xl mb-2">Organic Grains</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Native millets and organic pulses from tribal belts.</p>
-</div>
-</div>
-<!-- Category 6: Sweets -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="traditional kerala sweets like jaggery-coated banana chips and halwa on a banana leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGrI7Mqos5Y1RgcdYkJz7rjOd7T-0nUteEILQhTtkLhV-aOqV50aV38Mxmk5IPvTJd9PkSfPMhLne-zR6ZkEfVRlPx-KYg0LvxPB1K7nIvmMJtZzC_qzIs23-qOUvEhCoPj6DQR7JkgOTr345t5mM2vgdDngI4qBsv4KU5VCwr9HxrKa7iQUqBCtUT2LwHTH2pyRpdB0WgreIQVAAtpNst-iCJ9UkwJbBDaba55N2NGY8aYZ0F3HwjlcxLGcpMTxw8tjwHwSHNA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Pure Jaggery</span>
-<h3 class="text-white font-headline text-3xl mb-2">Heritage Sweets</h3>
-<p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">Authentic Kozhikodan halwa and sarkara varatty.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Our Story Section -->
-<section class="py-24 bg-surface-container-low overflow-hidden reveal" id="story">
-<div class="max-w-screen-2xl mx-auto px-8">
-<!-- Row 1 -->
-<div class="flex flex-col lg:flex-row items-center gap-16 mb-32">
-<div class="lg:w-1/2 relative">
-<div class="absolute -top-10 -left-10 w-64 h-64 bg-secondary-fixed opacity-30 rounded-full blur-3xl"></div>
-<img class="relative z-10 w-full aspect-[4/3] object-cover rounded-2xl shadow-xl" data-alt="elderly artisan farmer with weathered hands examining green coffee beans in a sun-drenched courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj2v0mjlE_w6A7aWsNv3XTmyATQjKylEezRopEu76QwRy4JXhb2NFLyIjXrg5ghQMty5F-zgT_2Ih1HPGwVXyZpUSmLjw1OTVCzg4w6byqMtOD-4bRNBMChWnCL6rWVEAxhfauxE9atjr_X3xLwebu7sf7Oab5IStkzju9kdDw4fK33pZTSvaWZGCH3zf8Q95vtiMjRY03b3BjgNaNn5FkgCJhPoIvWT46lzW01rXIgpovxJqHEIdDBfcUCD1C1gzS0aSxZwDQ4g"/>
-<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl text-on-primary z-20 hidden md:block">
-<p class="font-headline text-xl italic leading-relaxed">"The earth speaks to those who listen."</p>
-</div>
-</div>
-<div class="lg:w-1/2">
-<span class="font-label text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">Grown with Intention</span>
-<h2 class="font-headline text-4xl md:text-5xl text-primary mb-8 leading-tight">A Legacy of Soil and Soul</h2>
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
-                        SavorFarm began with a simple promise: to bridge the gap between the resilient farmers of rural Kerala and the discerning global palate. What started as a small collective of organic growers has matured into a heritage archive of the region's most precious ingredients.
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center reveal px-2 sm:px-0">
+                <a class="btn-primary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto"
+                    href="#products">Explore Library</a>
+                <a class="btn-secondary-premium px-10 py-4 rounded-lg font-bold text-base md:text-lg w-full sm:w-auto"
+                    href="#story">Our Legacy</a>
+            </div>
+        </div>
+        <!-- Decorative Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 hero-wave-wrap">
+            <svg class="relative block w-full h-[120px] hero-wave" data-name="Layer 1" preserveaspectratio="none"
+                viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C49.63,22.21,114.5,43.43,184.4,54.67c51.3,8.23,101.44,11.3,136.99,1.77Z"
+                    fill="#fcf9f3"></path>
+            </svg>
+        </div>
+    </section>
+    <!-- Product Categories Bento Grid -->
+    <section class="py-24 px-8 max-w-screen-2xl mx-auto bg-surface reveal" id="products">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-xl">
+                <h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">The Curated Pantry</h2>
+                <p class="text-on-surface-variant">Each category represents a piece of Kerala's culinary heritage,
+                    sourced directly from small-scale family farms committed to ancestral methods.</p>
+            </div>
+            <a class="text-secondary font-semibold flex items-center gap-2 group" href="#">
+                View All Categories <span
+                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Category 1: Rice -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="macro shot of raw heirloom red rice grains in a rustic ceramic bowl with earthy textures"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKUPOI1mVxBLJ439RcrgMDPKMKbw5t9kiezOVBTubmuEzln3-VtSnddhd3R836jZarv7da7iJCFH94WOc6RIXszsSeMS9sinCVaPB-qjaiDEke2Le-8FVOo4OnZf1RAejcI6hKNalpea0OzvfaagSPToBXIUneeXRXj6NS_Y3VLjjFrXdYfwAciobzLBw09m3oWBgNq0SMLpKzv_LQUzihMkCQwE22gw4rjpgWLjCqXCnO7rQ45qTvp0Asd6V_2V3JlPOB57p_3Q" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Ancient
+                        Grains</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Heritage Rice</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Hand-pounded Palakkadan Matta and Navara varieties.</p>
+                </div>
+            </div>
+            <!-- Category 2: Coconut Oil -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="clear glass bottle of pure coconut oil standing on a wooden surface with split fresh coconut nearby"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0SMlag0etT7-8Pj42bC_naNpQTDyTxoEmCy6cWafYsvFDoV_wdUAGrPFng0G2nLRpldBXgpPbOi3cUyCLHrIbIwzrRcavRdQ7oHFkjOKqhA4BbFf729v-TSKvxJ6k0IQdK3ue2YJ6KtP5lmOwfzxvfZrCwF4Ctng4hXA0L61Gga1BNZoegSzPFiog7tWf9P1AqXjz5_HJRWKugkck716dPtV-ul09NYBTNNy2YT5VkQotqYeOK5uoRSmGWttO0r_iPZzDUFuRdw" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Cold
+                        Pressed</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Coconut Oil</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Virgin extracts from sun-dried estate kernels.</p>
+                </div>
+            </div>
+            <!-- Category 3: Spices -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="vibrant assortment of whole spices including peppercorns, cardamom and cinnamon bark on a dark slate surface"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhE7EJB7nnARWmXQgnTQU2H3PJxEt8t9BUdZ7COBp7dwQiSES1gTUbJjtH7dVw222RCdgQvCCTd7jwZOJSVRBZUViJUCfC-Tv7laAVUhquCcFV2182enrBQWL5CLGCeI9bhrNrraE4cgmp5IwxLh2-ImUQ3aN3lJyPMSMQX08okpASuKQSmlLZCYLz9pV72Z-YAIKeHoB1ViG6-x6W6gdpg_UhzLKAfewoyDMoUjizTuHVepjQKjm0J_At6IsBC4zmAN8Bps6_kw" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">High
+                        Altitude</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Black Gold &amp; Spices</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Tellicherry peppercorns and high-grade cardamom.</p>
+                </div>
+            </div>
+            <!-- Category 4: Snacks -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="crispy golden banana chips in a traditional brass bowl with curry leaves on the side"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS276uc8r07a8N2y8mzFdbTxW3-YN7wifSgU493OCmRxi2qDeQ1LhTJdvdYcE6jWQvl3wDFvtPuevoBB0YBwx4qhXhW2RraWXRupVp-MvifAtkQ4Qc87kA_yJe8iEQf5hy4QdgKnp9jQ80Qhq-bFe9IiMZI1XWTWErm8UY-MOQxrVdnYGoopLf1JxpUcPq2NGoKBoyb-UlTS5J7-X9my7ll_p2E_X6fpNmBLHgwl7Hut7Ofxz5tGv-3LkXV2vHGpK7JCY3VPksvw" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Artisanal
+                        Crunch</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Traditional Snacks</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Nendran banana chips fried in fresh coconut oil.</p>
+                </div>
+            </div>
+            <!-- Category 5: Grains -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="collection of millets and whole grains in rustic linen sacks on a barn-wood table"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPQCfrg98GgNUDE3nEGZoIB9jjfB-O1myEI2ugGsdVmPbAwBgyIMbhEGeAEBaKis9_ap-WpLDFWsmRiERLmGe-MO1112Tn5tRWdGiYIlP4ITzjuenGFOTksluvcogfCJ9yH4vIqWkXLZ5QG3-BG_VGDGfiA0hAeWYyPB9JXVuCbv8t0XFaBf4D85x1Oyh2yXGnTrzAVGHyaNS1Cf_-Y5NAOaKl6h-E6PQyOG5YuKbl8qqi-RGEHuru7VRWxxQZHr573DIM3Z49ew" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Sustainable
+                        Harvest</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Organic Grains</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Native millets and organic pulses from tribal belts.</p>
+                </div>
+            </div>
+            <!-- Category 6: Sweets -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-surface-container-low aspect-[4/5] cursor-pointer stagger-item product-card">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="traditional kerala sweets like jaggery-coated banana chips and halwa on a banana leaf"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGrI7Mqos5Y1RgcdYkJz7rjOd7T-0nUteEILQhTtkLhV-aOqV50aV38Mxmk5IPvTJd9PkSfPMhLne-zR6ZkEfVRlPx-KYg0LvxPB1K7nIvmMJtZzC_qzIs23-qOUvEhCoPj6DQR7JkgOTr345t5mM2vgdDngI4qBsv4KU5VCwr9HxrKa7iQUqBCtUT2LwHTH2pyRpdB0WgreIQVAAtpNst-iCJ9UkwJbBDaba55N2NGY8aYZ0F3HwjlcxLGcpMTxw8tjwHwSHNA" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                </div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <span
+                        class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label mb-3">Pure
+                        Jaggery</span>
+                    <h3 class="text-white font-headline text-3xl mb-2">Heritage Sweets</h3>
+                    <p
+                        class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                        Authentic Kozhikodan halwa and sarkara varatty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Story Section -->
+    <section class="py-24 bg-surface-container-low overflow-hidden reveal" id="story">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <!-- Row 1 -->
+            <div class="flex flex-col lg:flex-row items-center gap-16 mb-32">
+                <div class="lg:w-1/2 relative">
+                    <div
+                        class="absolute -top-10 -left-10 w-64 h-64 bg-secondary-fixed opacity-30 rounded-full blur-3xl">
+                    </div>
+                    <img class="relative z-10 w-full aspect-[4/3] object-cover rounded-2xl shadow-xl"
+                        data-alt="elderly artisan farmer with weathered hands examining green coffee beans in a sun-drenched courtyard"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj2v0mjlE_w6A7aWsNv3XTmyATQjKylEezRopEu76QwRy4JXhb2NFLyIjXrg5ghQMty5F-zgT_2Ih1HPGwVXyZpUSmLjw1OTVCzg4w6byqMtOD-4bRNBMChWnCL6rWVEAxhfauxE9atjr_X3xLwebu7sf7Oab5IStkzju9kdDw4fK33pZTSvaWZGCH3zf8Q95vtiMjRY03b3BjgNaNn5FkgCJhPoIvWT46lzW01rXIgpovxJqHEIdDBfcUCD1C1gzS0aSxZwDQ4g" />
+                    <div
+                        class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl text-on-primary z-20 hidden md:block">
+                        <p class="font-headline text-xl italic leading-relaxed">"The earth speaks to those who listen."
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <span
+                        class="font-label text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">Grown
+                        with Intention</span>
+                    <h2 class="font-headline text-4xl md:text-5xl text-primary mb-8 leading-tight">A Legacy of Soil and
+                        Soul</h2>
+                    <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                        SavorFarm began with a simple promise: to bridge the gap between the resilient farmers of rural
+                        Kerala and the discerning global palate. What started as a small collective of organic growers
+                        has matured into a heritage archive of the region's most precious ingredients.
                     </p>
-<p class="text-lg text-on-surface-variant leading-relaxed">
-                        We don't just sell produce; we curate stories. Every grain of matta rice and every drop of cold-pressed oil is a testament to sustainable practices that have remained unchanged for centuries.
+                    <p class="text-lg text-on-surface-variant leading-relaxed">
+                        We don't just sell produce; we curate stories. Every grain of matta rice and every drop of
+                        cold-pressed oil is a testament to sustainable practices that have remained unchanged for
+                        centuries.
                     </p>
-</div>
-</div>
-<!-- Stats Bar -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 bg-surface-container-lowest py-16 px-12 rounded-[2rem] shadow-sm border border-outline-variant/10" id="counter-section">
-<div class="text-center">
-<div class="font-headline text-6xl text-secondary mb-2" data-target="15">0</div>
-<p class="font-label text-primary font-medium tracking-wide">Years of Heritage</p>
-</div>
-<div class="text-center">
-<div class="font-headline text-6xl text-secondary mb-2" data-target="120">0</div>
-<p class="font-label text-primary font-medium tracking-wide">Artisan Products</p>
-</div>
-<div class="text-center">
-<div class="font-headline text-6xl text-secondary mb-2" data-target="2">0</div>
-<p class="font-label text-primary font-medium tracking-wide">Million Happy Families</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Recipe Spotlight Section -->
-<section class="py-24 bg-surface reveal" id="recipes">
-<div class="max-w-screen-2xl mx-auto px-8">
-<div class="flex items-center justify-between mb-16">
-<div>
-<h2 class="font-headline text-4xl md:text-5xl text-primary mb-4">The Kerala Kitchen</h2>
-<p class="text-on-surface-variant max-w-xl">Master the art of spice-led cooking with our signature farmhouse recipes.</p>
-</div>
-<div class="flex gap-4">
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-<div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 snap-x">
-<!-- Recipe 1 -->
-<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="bowl of vibrant yellow vegetable stew with fresh curry leaves and creamy coconut milk base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtf-BL2lWT42_LIVDZFqhjZI3RclMGM6e5Pwzo2-d1O_k3p5c4wiusiZ-PgrO_vFt2GGpkbmnyfkOt7h-Qg-zyJoPm7ID4xhLGq7RFTckviuMpESCJK79JA57qXA0swniEK-cujpz-hHHhSk6J5gBmNGeDSn0UPS_HJuXAegC6theAlYynLVL6mp9GEEuWAHEpPgK2RAtXlA4A2R-qC6C6Mgxeg4SZVz4kb9B2BpC171d3d2Bnhh_XbsaDMR5Q5Cgg2md-kSd4uA"/>
-<div class="absolute top-4 left-4">
-<span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Intermediate</span>
-</div>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-2">Coconut Vegetable Stew</h3>
-<div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 45 Mins</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_fire_department</span> Vegan Friendly</span>
-</div>
-</div>
-<!-- Recipe 2 -->
-<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="aromatic fish curry with thick red tamarind sauce in a traditional clay pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsTyWMiH5PWhOBfYF9jvvvnDNQU5XKHXASgO1JIQAR5it72C_GRB_cEWaYcyeC87R4pzXJNs5moxGg0gZiXRrU1hy6Wpn4ahq-HbxyYJeoMTRXPboHPZsEcjXx_ds6kaTr4awQ6C_cOEQepHR6CFr746ijOgaRkj2Z-O46X_MLNYjvQ07GlkoqhS1LKpTyAYKPQ9S1fa2ubGbLgqDmdBfw5AX6oIQ5wLLrMbsw_rutLSUdUrkNtcR2LlGS0y8wNKddsH5HVbTryw"/>
-<div class="absolute top-4 left-4">
-<span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Advanced</span>
-</div>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-2">Malabar Red Fish Curry</h3>
-<div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 60 Mins</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">restaurant</span> Masterclass</span>
-</div>
-</div>
-<!-- Recipe 3 -->
-<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="crispy golden thin crepes served with a side of white coconut chutney and spiced potato filling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaYKi1-ciSVnJBj87LpnZ3oGF7j-0bEfd5rUoB_kTYmGZ9mnlTkDonHVRanHoLqRwOwBsFOppRosDXAd3eYr6G1hf87Wc1ISRB_jjO1bB7xFYCW2c1GdHBgTFGNiefDDsjI9iz4wRy4n1T6gS24XpPqkap6E6RP4oOjutvW2aEIgb5OaKFUa3G06bxCXxQUQlKnnetLOAndtHNaA-HHVerNM6essfJqCAOyaVhR-qvO1h6wzQkdlZDD6JGPwtlVbtbDXSt3tnIhg"/>
-<div class="absolute top-4 left-4">
-<span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Easy</span>
-</div>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-2">Perfect Paper Dosa</h3>
-<div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 20 Mins</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">sunny</span> Breakfast Favorite</span>
-</div>
-</div>
-<!-- Recipe 4 -->
-<div class="flex-none w-[80vw] sm:w-[320px] md:w-[350px] snap-start group stagger-item product-card">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="creamy rice pudding with nuts and raisins in a polished bronze bowl on a traditional rug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nhqX4hcqm5j7Q-Vzm7FI1rSGCgrPyQWoP4WpT82Pn3IIaBCQ9AGZk59-tHqg4IZJ7LaKCMk3Jlv5-tzZNFCyVxFe1qKDHg-XvsfP6kr7QJeJPwKGx6kR7G4diCm2hUUriD1XXeEPX9Gja8RGOnSuLcSbV8dNovY6syIG4BBXd_sUj9ND0bZyDViWiW7UrmjKnZMA56kf9cZqMT1cjIiTFTjqphbChLStg490mDppK8NFQhoqwJElG-47orUlqhSJ1c89Xq4xrg"/>
-<div class="absolute top-4 left-4">
-<span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Easy</span>
-</div>
-</div>
-<h3 class="font-headline text-2xl text-primary mb-2">Jaggery Palada Payasam</h3>
-<div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 40 Mins</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">celebration</span> Dessert Special</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Where to Buy Tabs Section -->
-<section class="py-24 bg-surface-container-low reveal" id="locations">
-<div class="max-w-4xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="font-headline text-4xl md:text-5xl text-primary mb-4">Visit Our Archive</h2>
-<p class="text-on-surface-variant">Find SavorFarm products in select artisanal stores across India.</p>
-</div>
-<!-- Tab System -->
-<div class="flex flex-col">
-    <div class="flex justify-center border-b border-outline-variant mb-12">
-        <input checked="" class="hidden" id="tab-kerala" name="state-tabs" type="radio"/>
-        <label class="label-kerala px-8 py-4 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent" for="tab-kerala">Kerala</label>
-        <input class="hidden" id="tab-karnataka" name="state-tabs" type="radio"/>
-        <label class="label-karnataka px-8 py-4 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent" for="tab-karnataka">Karnataka</label>
-        <input class="hidden" id="tab-tamilnadu" name="state-tabs" type="radio"/>
-        <label class="label-tamilnadu px-8 py-4 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent" for="tab-tamilnadu">Tamil Nadu</label>
-        <input class="hidden" id="tab-maharashtra" name="state-tabs" type="radio"/>
-        <label class="label-maharashtra px-8 py-4 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent" for="tab-maharashtra">Maharashtra</label>
-    </div>
+                </div>
+            </div>
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 bg-surface-container-lowest py-16 px-12 rounded-[2rem] shadow-sm border border-outline-variant/10"
+                id="counter-section">
+                <div class="text-center">
+                    <div class="font-headline text-6xl text-secondary mb-2" data-target="15">0</div>
+                    <p class="font-label text-primary font-medium tracking-wide">Years of Heritage</p>
+                </div>
+                <div class="text-center">
+                    <div class="font-headline text-6xl text-secondary mb-2" data-target="120">0</div>
+                    <p class="font-label text-primary font-medium tracking-wide">Artisan Products</p>
+                </div>
+                <div class="text-center">
+                    <div class="font-headline text-6xl text-secondary mb-2" data-target="2">0</div>
+                    <p class="font-label text-primary font-medium tracking-wide">Million Happy Families</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recipe Spotlight Section -->
+    <section class="py-24 bg-surface reveal" id="recipes">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex items-center justify-between mb-16">
+                <div>
+                    <h2 class="font-headline text-4xl md:text-5xl text-primary mb-4">The Kerala Kitchen</h2>
+                    <p class="text-on-surface-variant max-w-xl">Master the art of spice-led cooking with our signature
+                        farmhouse recipes.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button id="recipe-prev"
+                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button id="recipe-next"
+                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="recipe-swiper swiper" id="recipe-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Recipe 1 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="bowl of vibrant yellow vegetable stew with fresh curry leaves and creamy coconut milk base"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtf-BL2lWT42_LIVDZFqhjZI3RclMGM6e5Pwzo2-d1O_k3p5c4wiusiZ-PgrO_vFt2GGpkbmnyfkOt7h-Qg-zyJoPm7ID4xhLGq7RFTckviuMpESCJK79JA57qXA0swniEK-cujpz-hHHhSk6J5gBmNGeDSn0UPS_HJuXAegC6theAlYynLVL6mp9GEEuWAHEpPgK2RAtXlA4A2R-qC6C6Mgxeg4SZVz4kb9B2BpC171d3d2Bnhh_XbsaDMR5Q5Cgg2md-kSd4uA" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Intermediate</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Coconut Vegetable Stew</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 45 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">local_fire_department</span> Vegan
+                                Friendly</span>
+                        </div>
+                    </div>
+                    <!-- Recipe 2 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="aromatic fish curry with thick red tamarind sauce in a traditional clay pot"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsTyWMiH5PWhOBfYF9jvvvnDNQU5XKHXASgO1JIQAR5it72C_GRB_cEWaYcyeC87R4pzXJNs5moxGg0gZiXRrU1hy6Wpn4ahq-HbxyYJeoMTRXPboHPZsEcjXx_ds6kaTr4awQ6C_cOEQepHR6CFr746ijOgaRkj2Z-O46X_MLNYjvQ07GlkoqhS1LKpTyAYKPQ9S1fa2ubGbLgqDmdBfw5AX6oIQ5wLLrMbsw_rutLSUdUrkNtcR2LlGS0y8wNKddsH5HVbTryw" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Advanced</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Malabar Red Fish Curry</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 60 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">restaurant</span> Masterclass</span>
+                        </div>
+                    </div>
+                    <!-- Recipe 3 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="crispy golden thin crepes served with a side of white coconut chutney and spiced potato filling"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaYKi1-ciSVnJBj87LpnZ3oGF7j-0bEfd5rUoB_kTYmGZ9mnlTkDonHVRanHoLqRwOwBsFOppRosDXAd3eYr6G1hf87Wc1ISRB_jjO1bB7xFYCW2c1GdHBgTFGNiefDDsjI9iz4wRy4n1T6gS24XpPqkap6E6RP4oOjutvW2aEIgb5OaKFUa3G06bxCXxQUQlKnnetLOAndtHNaA-HHVerNM6essfJqCAOyaVhR-qvO1h6wzQkdlZDD6JGPwtlVbtbDXSt3tnIhg" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Easy</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Perfect Paper Dosa</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 20 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">sunny</span> Breakfast Favorite</span>
+                        </div>
+                    </div>
+                    <!-- Recipe 4 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="creamy rice pudding with nuts and raisins in a polished bronze bowl on a traditional rug"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nhqX4hcqm5j7Q-Vzm7FI1rSGCgrPyQWoP4WpT82Pn3IIaBCQ9AGZk59-tHqg4IZJ7LaKCMk3Jlv5-tzZNFCyVxFe1qKDHg-XvsfP6kr7QJeJPwKGx6kR7G4diCm2hUUriD1XXeEPX9Gja8RGOnSuLcSbV8dNovY6syIG4BBXd_sUj9ND0bZyDViWiW7UrmjKnZMA56kf9cZqMT1cjIiTFTjqphbChLStg490mDppK8NFQhoqwJElG-47orUlqhSJ1c89Xq4xrg" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Easy</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Jaggery Palada Payasam</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 40 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">celebration</span> Dessert Special</span>
+                        </div>
+                    </div>
+                    <!-- Recipe 5 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="golden fried banana fritters dusted with coconut and cardamom on a slate plate"
+                                src="https://images.pexels.com/photos/5436119/pexels-photo-5436119.jpeg" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Snack</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Kerala Pazham Pori</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 25 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">local_fire_department</span>
+                                Tea-time</span>
+                        </div>
+                    </div>
+                    <!-- Recipe 6 -->
+                    <div
+                        class="swiper-slide flex-none w-[72vw] sm:w-[260px] md:w-[280px] lg:w-[300px] group stagger-item product-card">
+                        <div class="relative rounded-2xl overflow-hidden mb-6 aspect-square">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="layered Malabar parotta stacked with curry leaf garnish"
+                                src="https://images.pexels.com/photos/10810650/pexels-photo-10810650.jpeg" />
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary rounded-full text-xs font-label font-bold uppercase tracking-wider">Signature</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-2xl text-primary mb-2">Layered Malabar Parotta</h3>
+                        <div class="flex items-center gap-4 text-on-surface-variant font-label text-sm">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">schedule</span> 50 Mins</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">restaurant</span> Chef's Pick</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Where to Buy Tabs Section -->
+    <section class="py-24 bg-surface-container-low reveal" id="locations">
+        <div class="content-shell max-w-5xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16 px-2">
+                <h2 class="font-headline text-4xl md:text-5xl text-primary mb-4">Visit Our Archive</h2>
+                <p class="text-on-surface-variant">Find SavorFarm products in select artisanal stores across India.</p>
+            </div>
+            <!-- Tab System -->
+            <div class="flex flex-col gap-8">
+                <div class="flex gap-3 overflow-x-auto hide-scrollbar justify-start sm:justify-center border-b border-outline-variant pb-2">
+                    <input checked="" class="hidden" id="tab-kerala" name="state-tabs" type="radio" />
+                    <label
+                        class="label-kerala px-5 py-3 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent whitespace-nowrap"
+                        for="tab-kerala">Kerala</label>
+                    <input class="hidden" id="tab-karnataka" name="state-tabs" type="radio" />
+                    <label
+                        class="label-karnataka px-5 py-3 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent whitespace-nowrap"
+                        for="tab-karnataka">Karnataka</label>
+                    <input class="hidden" id="tab-tamilnadu" name="state-tabs" type="radio" />
+                    <label
+                        class="label-tamilnadu px-5 py-3 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent whitespace-nowrap"
+                        for="tab-tamilnadu">Tamil Nadu</label>
+                    <input class="hidden" id="tab-maharashtra" name="state-tabs" type="radio" />
+                    <label
+                        class="label-maharashtra px-5 py-3 cursor-pointer font-label font-semibold text-on-surface-variant hover:text-secondary transition-all border-b-2 border-transparent whitespace-nowrap"
+                        for="tab-maharashtra">Maharashtra</label>
+                </div>
 
-    <!-- Content Containers -->
-    <div id="tab-content-container" class="relative min-h-[180px]">
-        <div class="content-kerala tab-content grid grid-cols-1 md:grid-cols-2 gap-6 px-8 max-w-4xl mx-auto">
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Kochi Flagship</h4>
-                    <p class="text-on-surface-variant text-sm">Fort Kochi, Old Harbour Area</p>
+                <!-- Content Containers -->
+                <div id="tab-content-container" class="relative min-h-[160px]">
+                    <div
+                        class="content-kerala tab-content grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-2 sm:px-0 max-w-4xl mx-auto">
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Kochi Flagship</h4>
+                                <p class="text-on-surface-variant text-sm">Fort Kochi, Old Harbour Area</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Trivandrum Store</h4>
+                                <p class="text-on-surface-variant text-sm">Kowdiar Main Road</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="content-karnataka tab-content grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-2 sm:px-0 max-w-4xl mx-auto">
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Bangalore Indiranagar</h4>
+                                <p class="text-on-surface-variant text-sm">100 Feet Road, Hub</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Mysore Heritage Cellar</h4>
+                                <p class="text-on-surface-variant text-sm">Near Mysore Palace</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="content-tamilnadu tab-content grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-2 sm:px-0 max-w-4xl mx-auto">
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Chennai Adyar</h4>
+                                <p class="text-on-surface-variant text-sm">Gandhi Nagar Enclave</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="content-maharashtra tab-content grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-2 sm:px-0 max-w-4xl mx-auto">
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Mumbai Bandra</h4>
+                                <p class="text-on-surface-variant text-sm">Pali Hill Artisanal Market</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-xl flex items-center gap-4 sm:gap-6 shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+                            <div>
+                                <h4 class="font-headline text-xl text-primary">Pune Koregaon Park</h4>
+                                <p class="text-on-surface-variant text-sm">Lane 7 Organic Hub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter & Social -->
+    <section class="py-24 bg-primary text-on-primary reveal" id="contact">
+        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-headline text-4xl md:text-5xl mb-6">Join the Farmstand Community</h2>
+                <p class="text-on-primary-container text-lg max-w-md leading-relaxed mb-8">Receive seasonal harvest
+                    updates, artisan interviews, and early access to our limited reserve collections.</p>
+                <div class="flex gap-6">
+                    <a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                    <a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined">forum</span>
+                    </a>
+                    <a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
                 </div>
             </div>
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
+            <div class="bg-primary-container/10 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/5">
+                <form class="space-y-6">
+                    <div>
+                        <label
+                            class="block font-label text-xs uppercase tracking-widest text-on-primary-container mb-3 opacity-80">Full
+                            Name</label>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 focus:border-secondary rounded-lg py-4 px-5 outline-none text-white font-body transition-all placeholder:text-white/30"
+                            placeholder="Your name" type="text" />
+                    </div>
+                    <div>
+                        <label
+                            class="block font-label text-xs uppercase tracking-widest text-on-primary-container mb-3 opacity-80">Email
+                            Address</label>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 focus:border-secondary rounded-lg py-4 px-5 outline-none text-white font-body transition-all placeholder:text-white/30"
+                            placeholder="hello@example.com" type="email" />
+                    </div>
+                    <button
+                        class="w-full bg-secondary text-on-secondary py-4 rounded-lg font-bold tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">Subscribe
+                        to Archive</button>
+                    <p class="text-xs text-on-primary-container/40 text-center italic">Professional updates only.
+                        Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="lux-footer relative overflow-hidden ">
+        <div class="lux-footer-overlay"></div>
+        <div class="lux-footer-top max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 py-20 relative">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-5">
+                    <h2 class="font-headline text-2xl text-[#f5f1e8] font-semibold">SavorFarm</h2>
+                    <p class="text-[#a8b3ad] font-body leading-relaxed">Preserving the soul of Kerala through artisanal
+                        produce and ethical partnerships rooted in the Western Ghats.</p>
+                    <div class="lux-footer-divider"></div>
+                </div>
                 <div>
-                    <h4 class="font-headline text-xl text-primary">Trivandrum Store</h4>
-                    <p class="text-on-surface-variant text-sm">Kowdiar Main Road</p>
+                    <h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Explore
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a class="lux-footer-link" href="#">Our Story</a></li>
+                        <li><a class="lux-footer-link" href="#">Recipe Archive</a></li>
+                        <li><a class="lux-footer-link" href="#">Farmer Collective</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Help</h4>
+                    <ul class="space-y-3">
+                        <li><a class="lux-footer-link" href="#">Shipping Info</a></li>
+                        <li><a class="lux-footer-link" href="#">Returns Policy</a></li>
+                        <li><a class="lux-footer-link" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Contact
+                    </h4>
+                    <ul class="space-y-3 text-[#a8b3ad] font-body">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-base text-[#6f8f7b]">location_on</span>
+                            Fort Kochi, Kerala
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-base text-[#6f8f7b]">mail</span>
+                            harvest@savorfarm.in
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-base text-[#6f8f7b]">call</span>
+                            +91 (484) 221-1234
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="content-karnataka tab-content grid grid-cols-1 md:grid-cols-2 gap-6 px-8 max-w-4xl mx-auto">
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Bangalore Indiranagar</h4>
-                    <p class="text-on-surface-variant text-sm">100 Feet Road, Hub</p>
-                </div>
-            </div>
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Mysore Heritage Cellar</h4>
-                    <p class="text-on-surface-variant text-sm">Near Mysore Palace</p>
-                </div>
+        <div class="lux-footer-bottom relative">
+            <div class="lux-footer-bottom-inner max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 py-6">
+                <p class="text-xs font-label text-[#a8b3ad]">© 2026 SavorFarm</p>
+                <p class="text-xs font-label text-[#a8b3ad]">Designed by WAC</p>
             </div>
         </div>
-        <div class="content-tamilnadu tab-content grid grid-cols-1 md:grid-cols-2 gap-6 px-8 max-w-4xl mx-auto">
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Chennai Adyar</h4>
-                    <p class="text-on-surface-variant text-sm">Gandhi Nagar Enclave</p>
-                </div>
-            </div>
-        </div>
-        <div class="content-maharashtra tab-content grid grid-cols-1 md:grid-cols-2 gap-6 px-8 max-w-4xl mx-auto">
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Mumbai Bandra</h4>
-                    <p class="text-on-surface-variant text-sm">Pali Hill Artisanal Market</p>
-                </div>
-            </div>
-            <div class="bg-surface p-8 rounded-xl flex items-center gap-6 shadow-sm border border-outline-variant/10">
-                <span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-                <div>
-                    <h4 class="font-headline text-xl text-primary">Pune Koregaon Park</h4>
-                    <p class="text-on-surface-variant text-sm">Lane 7 Organic Hub</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</section>
-<!-- Newsletter & Social -->
-<section class="py-24 bg-primary text-on-primary reveal" id="contact">
-<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="font-headline text-4xl md:text-5xl mb-6">Join the Farmstand Community</h2>
-<p class="text-on-primary-container text-lg max-w-md leading-relaxed mb-8">Receive seasonal harvest updates, artisan interviews, and early access to our limited reserve collections.</p>
-<div class="flex gap-6">
-<a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all" href="#">
-<span class="material-symbols-outlined">share</span>
-</a>
-<a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all" href="#">
-<span class="material-symbols-outlined">forum</span>
-</a>
-<a class="w-12 h-12 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all" href="#">
-<span class="material-symbols-outlined">mail</span>
-</a>
-</div>
-</div>
-<div class="bg-primary-container/10 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/5">
-<form class="space-y-6">
-<div>
-<label class="block font-label text-xs uppercase tracking-widest text-on-primary-container mb-3 opacity-80">Full Name</label>
-<input class="w-full bg-white/5 border border-white/10 focus:border-secondary rounded-lg py-4 px-5 outline-none text-white font-body transition-all placeholder:text-white/30" placeholder="Your name" type="text"/>
-</div>
-<div>
-<label class="block font-label text-xs uppercase tracking-widest text-on-primary-container mb-3 opacity-80">Email Address</label>
-<input class="w-full bg-white/5 border border-white/10 focus:border-secondary rounded-lg py-4 px-5 outline-none text-white font-body transition-all placeholder:text-white/30" placeholder="hello@example.com" type="email"/>
-</div>
-<button class="w-full bg-secondary text-on-secondary py-4 rounded-lg font-bold tracking-wide hover:opacity-90 active:scale-[0.98] transition-all shadow-lg">Subscribe to Archive</button>
-<p class="text-xs text-on-primary-container/40 text-center italic">Professional updates only. Unsubscribe anytime.</p>
-</form>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="lux-footer relative overflow-hidden ">
-<div class="lux-footer-overlay"></div>
-<div class="lux-footer-top max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 py-20 relative">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="space-y-5">
-<h2 class="font-headline text-2xl text-[#f5f1e8] font-semibold">SavorFarm</h2>
-<p class="text-[#a8b3ad] font-body leading-relaxed">Preserving the soul of Kerala through artisanal produce and ethical partnerships rooted in the Western Ghats.</p>
-<div class="lux-footer-divider"></div>
-</div>
-<div>
-<h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Explore</h4>
-<ul class="space-y-3">
-<li><a class="lux-footer-link" href="#">Our Story</a></li>
-<li><a class="lux-footer-link" href="#">Recipe Archive</a></li>
-<li><a class="lux-footer-link" href="#">Farmer Collective</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Help</h4>
-<ul class="space-y-3">
-<li><a class="lux-footer-link" href="#">Shipping Info</a></li>
-<li><a class="lux-footer-link" href="#">Returns Policy</a></li>
-<li><a class="lux-footer-link" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label text-sm tracking-[0.12em] text-[#f5f1e8] font-medium mb-5 uppercase">Contact</h4>
-<ul class="space-y-3 text-[#a8b3ad] font-body">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-base text-[#6f8f7b]">location_on</span>
-Fort Kochi, Kerala
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-base text-[#6f8f7b]">mail</span>
-harvest@savorfarm.in
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-base text-[#6f8f7b]">call</span>
-+91 (484) 221-1234
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="lux-footer-bottom relative">
-<div class="lux-footer-bottom-inner max-w-screen-2xl mx-auto px-8 md:px-12 lg:px-16 py-6">
-<p class="text-xs font-label text-[#a8b3ad]">© 2026 SavorFarm</p>
-<p class="text-xs font-label text-[#a8b3ad]">Designed by WAC</p>
-</div>
-</div>
-</footer>
-<script src="js/main.js"></script>
-</body></html>
+    </footer>
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 
+</html>
