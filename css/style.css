@@ -246,6 +246,18 @@ body {
     pointer-events: auto;
 }
 
+.mobile-nav-panel,
+.mobile-nav-backdrop {
+    display: block;
+}
+
+@media (min-width: 1025px) {
+    .mobile-nav-panel,
+    .mobile-nav-backdrop {
+        display: none !important;
+    }
+}
+
 .mobile-nav-link {
     color: #f5f1e8;
     font-family: "Manrope", sans-serif;
