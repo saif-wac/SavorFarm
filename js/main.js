@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initSmoothScroll();
     initHeroWaveAnimation();
+    initHeroImageParallax();
     initHeaderScroll();
 });
 
@@ -94,17 +95,8 @@ function initTabs() {
 
     const updateTabs = (selectedId) => {
         tabContents.forEach(content => {
-            if (content.classList.contains(`content-${selectedId}`)) {
-                content.style.display = 'grid';
-                setTimeout(() => content.classList.add('active'), 10);
-            } else {
-                content.classList.remove('active');
-                setTimeout(() => {
-                    if (!content.classList.contains('active')) {
-                        content.style.display = 'none';
-                    }
-                }, 500);
-            }
+            const isTarget = content.classList.contains(`content-${selectedId}`);
+            content.classList.toggle('active', isTarget);
         });
         
         // Update label styles
@@ -162,13 +154,35 @@ function initHeroWaveAnimation() {
     if (!heroWave) return;
 
     const handleScroll = () => {
+        // Static wave requested; no animation beyond slight parallax.
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+}
+
+function initHeroImageParallax() {
+    const heroImg = document.querySelector('.hero-bg');
+    if (!heroImg) return;
+
+    let ticking = false;
+
+    const update = () => {
         const scrolled = window.pageYOffset;
-        if (scrolled < window.innerHeight) {
-            heroWave.style.transform = `translate3d(0, ${scrolled * 0.35}px, 0)`;
+        const offset = Math.min(scrolled * 0.25, 80);
+        heroImg.style.setProperty('--hero-img-shift', `${offset}px`);
+        ticking = false;
+    };
+
+    const handleScroll = () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
         }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    update();
 }
 
 /**
